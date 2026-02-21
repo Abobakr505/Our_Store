@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 14%;
+    --primary-foreground: 45 80% 65%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 222 47% 14%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 45 80% 55%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 45 80% 55%;
+
+    --radius: 0.5rem;
+
+    --gold: 45 80% 55%;
+    --gold-light: 45 70% 75%;
+    --gold-dark: 45 90% 40%;
+    --navy: 222 47% 14%;
+    --navy-light: 222 35% 25%;
+    --navy-dark: 222 55% 8%;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 45 80% 65%;
+    --sidebar-primary: 45 80% 55%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 35% 20%;
+    --sidebar-accent-foreground: 45 70% 75%;
+    --sidebar-border: 222 35% 20%;
+    --sidebar-ring: 45 80% 55%;
+  }
+
+  .dark {
+    --background: 222 55% 6%;
+    --foreground: 220 15% 92%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 45 80% 55%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 35% 18%;
+    --secondary-foreground: 220 15% 92%;
+
+    --muted: 222 35% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 45 80% 55%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 35% 18%;
+    --input: 222 35% 18%;
+    --ring: 45 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+   font-family: "Urbanist","IBM Plex Sans Arabic", sans-serif;
+  }
+
+  [dir="rtl"] {
+   font-family: "IBM Plex Sans Arabic",  sans-serif;
+  }
+    [dir="ltr"] {
+   font-family: "Urbanist",  sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+   font-family: "Urbanist","IBM Plex Sans Arabic",  sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(45 80% 55%), hsl(45 70% 75%), hsl(45 90% 40%));
+  }
+
+  .bg-gradient-navy {
+    background: linear-gradient(135deg, hsl(222 47% 14%), hsl(222 55% 8%));
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(45 80% 55%), hsl(45 90% 40%));
+  }
+
+  .shadow-gold {
+    box-shadow: 0 4px 20px -4px hsl(45 80% 55% / 0.3);
+  }
+
+  .shadow-navy {
+    box-shadow: 0 10px 40px -10px hsl(222 47% 14% / 0.4);
+  }
+}
