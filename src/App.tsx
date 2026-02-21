@@ -16,7 +16,6 @@ import ContactPage from "./pages/ContactPage";
 import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 import LoginPage from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
-import OrderTrackingPage from "./pages/OrderTrackingPage";
 import AccountDashboard from "./pages/AccountDashboard";
 
 const queryClient = new QueryClient();
